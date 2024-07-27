@@ -3,6 +3,7 @@ import ice from './images/ice.jpg';
 const homeLoad = function() {
     const content = document.querySelector('#content');
     const img = document.createElement('img');
+    img.classList.add('home-img');
     img.src = ice;
     const heading = document.createElement('p');
     heading.textContent = "Welcome to Sweet Scoops Ice Cream Shop!";

@@ -30,27 +30,33 @@ const menuLoad = function() {
             discription: "Celebrate the 4th of July with a sweet salute! This patriotic spin on ice-cream cake is the coolest dessert of the summer!"
         },
 
+
         {
             img: _3,
             name: "Lemon Ice",
             discription: "A nice and easy, healthy option for those with ice-cream machines and a little extra time. Deliciously creamy yet also light and refreshing!"
         }
+
     ];
 
     const content = document.querySelector('#content');
-    for(let i=0;i<5;i++){
+    const main = document.querySelector('div');
+    main.classList.add('menu');
+    for(let i=0;i<cards_name.length;i++){
         const card = document.createElement('div');
+        card.classList.add('.card')
         const name = document.createElement('p');
         const info = document.createElement('p');
-        const img = new Image();
         name.textContent = cards_name[i].name;
         info.textContent = cards_name[i].discription;
+        const img = new Image();
         img.src = cards_name[i].img;
         card.append(name);
         card.append(img);
         card.append(info);
-        content.append(card)
+        main.append(card)
     }
+    content.append(main)
 }
 
 export default menuLoad;

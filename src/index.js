@@ -1,7 +1,7 @@
 import homeLoad from './home.js';
 import menuLoad from './menu.js';
 import aboutLoad from './about.js';
-
+import './style.css'
 
 let main = (function() {
     homeLoad()
