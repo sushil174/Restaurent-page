@@ -9,7 +9,7 @@ const menuLoad = function() {
         {   
             img: _5,
             name: "Tartufo",
-            discription: "Tartufo is a classic Italian dessert that you can make at home. It requires some patience as there is freezing time involved. Rolling the tartufos in pistachio and cookie crumbs is extra delicious. "
+            discription: "Tartufo is a classic Italian dessert that you can make at home. Rolling the tartufos in pistachio and cookie crumbs is extra delicious. "
         },
 
         {
@@ -40,19 +40,19 @@ const menuLoad = function() {
     ];
 
     const content = document.querySelector('#content');
-    const main = document.querySelector('div');
+    const main = document.createElement('div');
     main.classList.add('menu');
     for(let i=0;i<cards_name.length;i++){
-        const card = document.createElement('div');
+        let card = document.createElement('div');
         card.classList.add('.card')
-        const name = document.createElement('p');
-        const info = document.createElement('p');
+        let name = document.createElement('p');
+        let info = document.createElement('p');
         name.textContent = cards_name[i].name;
         info.textContent = cards_name[i].discription;
-        const img = new Image();
+        let img = new Image();
         img.src = cards_name[i].img;
-        card.append(name);
         card.append(img);
+        card.append(name);
         card.append(info);
         main.append(card)
     }
